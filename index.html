@@ -113,38 +113,85 @@
   </div>
 </section>
 
+
 <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video autoplay loop muted controls width="1000">
+        <source src="./static/videos/aeg-rearrangement.mov" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        We propose a LLM-enhanced scene graph learning method to construct affordance-enhanced graph (AEG) 
+        and perform task planning for house-tidying rearrangement.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="./static/images/teaser/teaser_00.jpg" alt="Description of Image" style="width: 100%; height: auto; border: none;">
     </div>
   </div>
-</section>
+</section> -->
 
-<section class="visual result ">
+<section class="hero is-light is-small">
   <div class="container is-max-desktop">
-    <!-- Paper video. -->
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-    <!-- <h2 class="title is-3">Visual Result</h2> -->
-    <div class="publication-video">
-      <video autoplay loop muted controls width="1000">
-        <source src="./static/videos/aeg-rearrangement.mov" type="video/mp4">
-      </video>
+    <div id="results-carousel" class="carousel results-carousel"></div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="hero-body">
+            <img src="./static/images/teaser/teaser_00.jpg" alt="Description of Image" style="width: 100%; height: auto; border: none;">
+          </div>
+        </div>
+      </div>
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The household rearrangement task involves spotting misplaced objects in
+              a scene and accommodate them with proper places. It depends both on
+              common-sense knowledge on the objective side and human user preference
+              on the subjective side. 
+            </p>
+            <p>
+              In achieving such task, we propose to mine object
+              functionality with user preference alignment directly from the scene itself,
+              without relying on human intervention. To do so, we work with scene graph
+              representation and propose LLM-enhanced scene graph learning which
+              transforms the input scene graph into an affordance-enhanced graph (AEG)
+              with information-enhanced nodes and newly discovered edges (relations). In
+              AEG, the nodes corresponding to the receptacle objects are augmented with
+              context-induced affordance which encodes what kind of carriable objects can
+              be placed on it. New edges are discovered with newly discovered non-local
+              relations. 
+            </p>
+            <p>
+              With AEG, we perform task planning for scene rearrangement by
+              detecting misplaced carriables and determining a proper placement for each
+              of them. We test our method by implementing a tiding robot in simulator
+              and perform evaluation on a new benchmark we build. Extensive evalua-
+              tions demonstrate that our method achieves state-of-the-art performance
+              on misplacement detection and the following rearrangement planning.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
     </div>
   </div>
-</div>
-<!--/ Paper video. -->
-  </div>
 </section>
 
 
 
+<!-- 
 
-
-<section class="section">
+<section class="is-light is-small">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
@@ -178,9 +225,8 @@
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
   </div>
-</section>
+</section> -->
 
 
 
