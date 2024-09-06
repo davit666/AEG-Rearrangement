@@ -96,7 +96,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/davit666/AEG-Rearrangement/"
+                <a href="https://davit666.github.io/AEG-rearrangement/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -117,13 +117,20 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video autoplay loop muted controls width="1000">
-        <source src="./static/videos/aeg-rearrangement.mov" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
+      <div class="columns is-centered has-text-centered"></div>
+        <div class="column is-four-fifths">
+          <div class="hero-body">
+            <img src="./static/images/teaser/teaser_00.jpg" alt="Description of Image" style="width: 100%; height: auto; border: none;">
+          </div>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered"></h2>
         We propose a LLM-enhanced scene graph learning method to construct affordance-enhanced graph (AEG) 
         and perform task planning for house-tidying rearrangement.
       </h2>
+      <video autoplay loop muted controls width="1000">
+        <source src="./static/videos/aeg-rearrangement.mov" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
@@ -140,13 +147,6 @@
 <section class="hero is-light is-small">
   <div class="container is-max-desktop">
     <div id="results-carousel" class="carousel results-carousel"></div>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <div class="hero-body">
-            <img src="./static/images/teaser/teaser_00.jpg" alt="Description of Image" style="width: 100%; height: auto; border: none;">
-          </div>
-        </div>
-      </div>
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -187,48 +187,38 @@
 </section>
 
 
-
-<!-- 
-
-<section class="is-light is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            The household rearrangement task involves spotting misplaced objects in
-            a scene and accommodate them with proper places. It depends both on
-            common-sense knowledge on the objective side and human user preference
-            on the subjective side. 
-          </p>
-          <p>
-            In achieving such task, we propose to mine object
-            functionality with user preference alignment directly from the scene itself,
-            without relying on human intervention. To do so, we work with scene graph
-            representation and propose LLM-enhanced scene graph learning which
-            transforms the input scene graph into an affordance-enhanced graph (AEG)
-            with information-enhanced nodes and newly discovered edges (relations). In
-            AEG, the nodes corresponding to the receptacle objects are augmented with
-            context-induced affordance which encodes what kind of carriable objects can
-            be placed on it. New edges are discovered with newly discovered non-local
-            relations. 
-          </p>
-          <p>
-            With AEG, we perform task planning for scene rearrangement by
-            detecting misplaced carriables and determining a proper placement for each
-            of them. We test our method by implementing a tiding robot in simulator
-            and perform evaluation on a new benchmark we build. Extensive evalua-
-            tions demonstrate that our method achieves state-of-the-art performance
-            on misplacement detection and the following rearrangement planning.
-          </p>
-        </div>
+<div class="columns is-centered">
+  <div class="column is-full-width">
+    <h2 class="title is-3">Pipeline</h2>
+    <div class="column is-four-fifths">
+      <div class="hero-body">
+        <img src="./static/images/pipeline/pipeline_00.png" alt="Description of Image" style="width: 100%; height: auto; border: none;">
       </div>
     </div>
+    <div class="content has-text-justified">
+      <p>
+        Given a scene graph (SG) with key frames, we utilize Large Language Model (LLM) to perform context-induced affordance analysis for all objects in the scene. 
+        These affordances are incorporated into the SG, updating the nodes and edges to construct an Affordance Enhanced Graph (AEG). We then evaluate
+        the appropriateness of the current placements of all carriable objects in the AEG based on the affordance information of the objects and their receptacles, 
+        identifying misplaced items. For each misplaced carriable, we rate the suitability of each receptacle in the AEG as a placement target. The top k suitable
+        receptacles are selected as candidates, and their affordances are retrieved as prompt to the LLM to generate the placement decision.
+      </p>
+    </div>
   </div>
-</section> -->
+</div>
 
-
+<div class="columns is-centered"></div>
+  <div class="column is-full-width">
+    <h2 class="title is-3">Visual Results</h2>
+    <h3 class="title is-4">Simulated Environment</h3>
+    <div class="column is-four-fifths">
+      <div class="hero-body">
+        <img src="./static/images/Result_v1/Result_v1_00.png" alt="Description of Image" style="width: 100%; height: auto; border: none;">
+      </div>
+    </div>
+    
+  </div>
+</div>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
